@@ -1,0 +1,649 @@
+a {
+  text-decoration: none; /* le saca el subrayado a todos los hipervinculos de etiqueta a */
+} 
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* el padding y el border pasen a formar parte del cálculo del ancho de la caja y no lo suma posteriormente. */
+}
+*::selection {
+  background-color: #f5a2de;
+  color: black;
+}
+/* Scroll personalizado */
+body::-webkit-scrollbar{
+  width: 11px;
+  background: white;
+}
+body::-webkit-scrollbar-thumb{
+  background:#f5a2de;
+  border-radius: 5px;
+}
+body{
+  font-family: "Poppins";
+  background-color: white;
+  color: black;
+  margin-top:57px;
+  
+  width: 100%;
+}
+.banner{
+  display: flex;
+  position: relative;
+  background: black;;
+}
+.cajaIzquierdaBanner{
+  width: 45%;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  background:black;
+}
+.texto1Banner{
+  font-family: 'Krona One', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: white;
+}
+.texto2Banner{
+  font-family: 'Rubik Mono One', cursive;
+  font-size: 35px;
+  font-weight: 400;
+  -webkit-text-stroke: 2px #f5a2de;
+  color: white;
+}
+.texto3Banner{
+  font-family: 'Rubik Mono One', cursive;
+  font-size: 48px;
+  font-weight: 400;
+  -webkit-text-stroke: 2px #f5a2de;
+  color: white;
+}
+.texto4Banner{
+  font-size: 18px;
+  font-family: "Poppins";
+  font-weight: bold;
+  color: white;
+}
+.botonBannerIzquierda button{
+  margin-top: 15px;
+  padding: 14px;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 16px;
+  width: 200px;
+  border-radius: 5px;
+  border: white solid 2px;
+  transition: .3s ease-in-out;
+  color: white;
+  background: transparent;
+}
+.botonBannerIzquierda button:hover{
+  color: white;
+  border: white solid 1px;
+  background: #f5a2de;
+}
+.cajaDerechaBanner{
+  
+  height: 750px;
+  overflow: hidden; /* no sale de la caja la imagen */
+  clip-path: polygon(35% 0,100% 0,100% 100%,0% 100%);  /* Corta la imagen en diagonal */
+}
+.cajaDerechaBanner img{
+  object-fit: cover; 
+  height: 1400px;
+}
+.imagenRedondaBanner{
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  transform: translate(-50px,-50px);
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  
+  overflow: hidden; /* no sale de la caja la imagen */
+  filter: grayscale(100);
+}
+.imagenRedondaBanner img{
+  width: 100%;
+}
+.botonesBanner{
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 90%;
+  left: 25%;
+  right: 25%;
+  
+  width: 60%;
+}
+.botonBanner{
+  width: 100%;
+  height: 120px;
+  margin-right: 40px;
+  font-size: 19px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+}
+.botonBanner button{
+  background: #f5a2de;
+  color: black;
+  width: 180px;
+  border-radius: 12px;
+  text-align: center;
+  height: 100%;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+.botonBanner button:hover{
+  transform: scale(1.08); 
+}
+.seccionProgramasIndex{
+  
+  background: white;
+  padding-bottom: 3%;
+}
+.tituloEntrenamientos{
+  margin:130px auto 3% auto;
+  font-size: 48px;
+  color: black;
+  font-family: 'Krona One', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  width: 65%;
+  
+  line-height:1.1;  /* separacion vertical entre textos */
+}
+.tituloResultados{
+  margin:2% auto 3% auto;
+  font-size: 48px;
+  font-family: 'Krona One', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  width: 65%;
+  color: black;
+  line-height:1.1;  /* separacion vertical entre textos */
+}
+.cajasProgramasIndex{
+  
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.cajaPrograma{
+  margin: 2% 3%;
+  position: relative;
+  cursor: pointer;
+}
+.efectoPlan {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.cajaPrograma:hover .efectoPlan {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.textoEfectoPlan {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.cajaPrograma img{
+  width: 250px;
+  border-radius: 10px;
+}
+.dudas{
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  border: green solid 1px;
+  text-align: center;
+}
+.dudas button{
+  margin-top: 15px;
+  padding: 14px;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  border: black solid 2px;
+  transition: .3s ease-in-out;
+  color: white;
+  background: transparent;
+}
+
+.dudas button{
+  margin-top: 15px;
+  padding: 14px;
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  border: black solid 2px;
+  transition: .3s ease-in-out;
+  color: white;
+  background: transparent;
+}
+
+.dudas button:hover{
+  color: white;
+  border: white solid 1px;
+  background: #e8b33d;
+}
+
+.seccionResultados{
+  background-color: #ffd4f3;
+  padding: 3% 0;
+}
+.botonEnviar{
+  margin-top: 1%;
+  text-align: center;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.botonEnviar span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.botonEnviar span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.botonEnviar:hover span {
+  padding-right: 25px;
+}
+.botonEnviar:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.botonEnviar button{
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 600;
+  background: #f5a2de;
+  border: none;
+  transition: .3s ease-in-out;
+}
+.botonEnviar button:hover{
+  color: white;
+  border: white solid 1px;
+  background: black;
+}
+.cajasResultadosIndex{
+  
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/*--------------------------------------*/
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+  
+  margin: 1%;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  border-radius: 10px;
+}
+.flip-card-front img{
+  height: 350px;
+  width: 250px;
+  border-radius: 10px;
+}
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+
+/*--------------------------------------*/
+
+.seccionTuMeta{
+  padding: 5% 10% 5% 12%;
+  
+  display: flex;
+  background-color: #292b33;
+}
+.cajaTextosMeta{
+  width:60%;
+  color: white;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*centra en el plano vertical */
+}
+.tituloMeta{
+  font-size: 40px;
+  font-family: 'Rubik Mono One', cursive;
+  font-weight: bold;
+  line-height:1.1;  /* separacion vertical entre textos */
+  -webkit-text-stroke: 1px #f5a2de;
+  color: white;
+}
+.subtituloMeta{
+  font-family: 'Krona One', sans-serif;
+  font-weight: bold;
+  font-size:18px;
+  color: white;
+  margin-top: 10px;
+}
+.textoMeta{
+  font-size: 18px;
+  font-family: "Poppins";
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.textoMeta a{
+  color: #f5a2de;
+  font-weight: bold
+}
+.textoMeta a:hover{
+  color: black;
+}
+.cajaImagenMeta{
+  height: 500px;
+  padding-left: 0%; /* ubica imagen a la derecha */
+  position: relative;
+  
+  margin-left: 5%;
+}
+.cajaImagenMeta img{
+  height: 100%;
+  filter: grayscale(100);
+}
+.cajaImagenMeta::after {
+  content: "";
+  width: 70%; /* cuanto va a cubrir el difuminado */
+  height: 100%;
+  position: absolute;
+  left: 0%; /* dentro de la caja de la imagen desde donde va a arrancar el difuminado */
+  bottom: 0;
+  background-image: linear-gradient(to right, #181818, transparent);
+}
+.seccionUnete{
+  
+  padding: 5% 5% 5% 12%;
+  display: flex;
+  flex-direction: column;
+}
+.tituloUnete{
+  font-size: 48px;
+  font-family: 'Krona One', sans-serif;
+  font-weight: bold;
+  line-height:1.1;  /* separacion vertical entre textos */
+  color: black;
+}
+.textoUnete{
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.inputUnete{
+  width: 350px;
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.seccionUnete input{
+  background: transparent;
+  border: none;
+  width: 100%;
+  border-radius: 0px;
+  padding: 5px;
+}
+.seccionUnete input[type="email"] {
+  color: white; /* color del texto que ingreso en el input */
+}
+.botonUnete{
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.botonUnete span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.botonUnete span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.botonUnete:hover span {
+  padding-right: 25px;
+}
+
+.botonUnete:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.seccionUnete button{
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Poppins";
+  font-weight: 600;
+  background: #f5a2de;
+  border: none;
+  transition: .3s ease-in-out;
+}
+.seccionUnete button:hover{
+  color: white;
+  border: white solid 1px;
+  background: black;
+}
+@media (max-width:1330px){
+  .texto2Banner{
+    font-size: 30px;
+  }
+}
+@media (max-width:1200px){ 
+  .cajaDerechaBanner{
+    display: none;
+  }
+  .imagenRedondaBanner{
+    display: none;
+  }
+  .cajaIzquierdaBanner{
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 8%;
+  }
+  .botonesBanner{
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 270px;
+    justify-content: space-between;
+  }
+  .botonBanner{
+    height: 100px;
+    font-size: 17px;
+    margin: 1%;
+  }
+  .botonBanner button{
+    width: 100%;
+  }
+  .tituloEntrenamientos{
+    margin-top: 120px;
+    width: 90%;
+  }
+  .cajasProgramasIndex{
+    width: 100%;
+  }
+  .tituloResultados{
+    width:90%
+  }
+  .cajasResultadosIndex{
+    width: 90%;
+  }
+  .seccionTuMeta{
+    padding: 8% 2%;
+  }
+}
+
+@media (max-width:800px){ 
+  .tituloEntrenamientos{
+    font-size:30px;
+    margin-top:220px
+  }
+  .botonesBanner{
+    top: 105%;
+    flex-wrap: wrap;
+    justify-content:space-around;
+  }
+  .botonBanner{
+    width: 45%;
+    height: 70px;
+  }
+  .tituloResultados{
+    font-size:35px
+  }
+  .flip-card {
+    width: 300px;
+    height: 400px;
+  }
+  .flip-card-front img{
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+  }
+  .seccionTuMeta{
+    flex-direction: column;
+    align-items: center;
+  }
+  .cajaTextosMeta{
+    width:95%;
+    text-align: center;
+  }
+  .tituloMeta{
+    font-size: 40px;
+  }
+  .textoMeta{
+    margin-top: 20px;
+  }
+  .seccionUnete{
+    padding: 5% 7% 7% 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .tituloUnete{
+    font-size: 35px;
+  }
+  .inputUnete{
+    width: 250px;
+  }
+}
+
+@media (max-width:360px){ 
+  .texto1Banner{
+    font-size: 14px;
+  }
+  .texto2Banner, .texto3Banner{
+    font-size: 30px;
+  }
+  .botonBanner{
+    font-size: 15px;
+    height: 50px;
+  }
+  .tituloEntrenamientos{
+    margin-top:180px;
+    margin-bottom: 8%;
+    font-size: 25px;
+  }
+  .tituloResultados{
+    font-size: 25px;
+  }
+  .tituloMeta{
+    font-size: 30px;
+  }
+  .tituloUnete{
+    font-size: 33px;
+  }
+}

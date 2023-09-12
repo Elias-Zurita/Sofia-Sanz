@@ -1,0 +1,152 @@
+.seccionTabs{
+    margin: 3% auto;
+    width: 80%;
+    
+}
+.w3-bar{ /* los botones */
+    
+    margin-bottom: 50px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.w3-bar .w3-bar-item{
+    width: 30%;
+    padding: 25px 12px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 600;
+    
+}
+.w3-bar button:hover{  /* hover al boton de tabs */
+    background-color:#f5a2de !important;
+    color: black!important;
+}
+.w3-red, .w3-hover-red:hover {   /* boton seleccionado  */
+    background-color: #f5a2de!important; /* el important le aplica el color al tab seleccionado */
+}
+.w3-border{ /* info tabs */
+    border: white solid 3px;
+    padding: 0;
+}
+.cajasTabs{
+    border-radius: 15px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    background: #181818;
+    padding: 2%;
+    color: white;
+}
+.esteCambio{
+    margin-bottom:5%
+}
+.tituloCambio{
+    font-weight:bold;
+    font-size:25px;
+    color: #f5a2de;
+}
+.cambios{
+    font-size: 18px;
+}
+.cajaDetallePlan{
+    display: flex;
+}
+.cajaImagenTab{
+    width:30%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.cajaImagenTab img{
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: auto;
+}
+.cajaTextoTab{
+    width:70%;
+    padding-left: 2%;
+}
+.cajaTextoTab ul{
+    list-style: none;
+}
+.tituloTab{
+    font-size:25px;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+.cajaTextoTab i{ /* Mancuerna */
+    font-size:20px;
+    color: #f5a2de;
+    margin-right: 2%;
+}
+.cajaTextoTab span{ /* Brazo */
+    font-size:25px;
+}
+.infoPlan div{
+    margin-bottom:1%;
+    font-size: 18px;
+    padding-right: 5%;
+}
+.cajasPlanesResponsive{
+    display: none;
+}
+@media (max-width:1200px){
+    .seccionTabs{
+        width: 95%;
+    }
+} 
+
+@media (max-width:900px){
+    .seccionTabs{
+        display: none;
+    }
+    .cajasPlanesResponsive{
+        display: block;
+        margin-top: 50px;
+    }
+    .tituloTab{
+        text-decoration:underline;
+        font-style: italic;
+    }
+    .cajasTabs{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+        padding-top:5%;
+    }
+    .cajaImagenTab{
+        width:60%;
+    }
+    .cajaImagenTab img{
+        width: 90%;
+        margin-bottom: auto;
+    }
+    .cajaTextoTab{
+        width:95%;
+        margin-top: 2%;
+    }
+}
+@media (max-width:600px){
+    .cajaImagenTab{
+        width:90%;
+    }
+    .cajaImagenTab img{
+        width: 100%;
+    }
+    .cajaTextoTab{
+        width:100%;
+        padding: 0% 1% 0% 1%;
+    }
+    .infoPlan{
+        padding-left: 2rem;
+    }
+
+}
+@media (max-width:480px){
+    .tituloTab{
+        text-align: center;
+    }
+}
