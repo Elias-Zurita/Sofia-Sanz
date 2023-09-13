@@ -1,10 +1,10 @@
 <p align="center">
-   <a href=""><img src="https://github.com/Elias-Zurita/Sofia-Sanz/blob/master/public/images/logo transparente.png" style= "width: 350px"></a>
+   <a href="https://sofiasanzfitness.com/"><img src="https://github.com/Elias-Zurita/Sofia-Sanz/blob/master/images/logo%20transparente.png" style= "width: 350px"></a>
 </p>
 
 # SOFIA SANZ 💪🏼
 
-Desarrollo de un <a href="">Sitio web para Campeona Sudamericana de Fisicoculturismo.</a>
+Desarrollo de un <a href="https://sofiasanzfitness.com/">Sitio web para Campeona Sudamericana de Fisicoculturismo.</a>
 Maquetado y diseño de la página web.
 Desarrollo de buenas prácticas (responsive, UX).
 Implementacion de formularios de contacto funcionales desde el sitio web y redes sociales, siguiendo los lineamientosde Metodologías Ágiles (SCRUM).
@@ -23,4 +23,4 @@ Implementacion de formularios de contacto funcionales desde el sitio web y redes
 ## DEMO :globe_with_meridians:
 - Para ver la aplicacion sin necesidad de clonar el repositorio puede acceder al siguiente enlace: 
 
-www..com
+www.sofiasanzfitness.com
