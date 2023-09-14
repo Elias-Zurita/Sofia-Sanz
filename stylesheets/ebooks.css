@@ -97,6 +97,9 @@
     .eboook{
         width:100%;
     }
+    .eboook img{  
+        filter: grayscale(0%);
+    }
 }
 @media (max-width:360px){ 
     .portadaEbook{
