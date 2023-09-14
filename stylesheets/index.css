@@ -507,9 +507,6 @@ body{
   border-radius: 0px;
   padding: 5px;
 }
-.seccionUnete input[type="email"] {
-  color: white; /* color del texto que ingreso en el input */
-}
 .botonUnete{
   width: 200px;
   margin-top: 10px;

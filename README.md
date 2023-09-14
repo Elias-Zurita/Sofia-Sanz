@@ -23,4 +23,4 @@ Implementacion de formularios de contacto funcionales desde el sitio web y redes
 ## DEMO :globe_with_meridians:
 - Para ver la aplicacion sin necesidad de clonar el repositorio puede acceder al siguiente enlace: 
 
-www.sofiasanzfitness.com
+https://sofiasanzfitness.com/
