@@ -80,7 +80,18 @@
   .textoConHover:hover{
     opacity: 1;
   }
-  
+  .textoMobile{
+    display: none;
+    color: white;
+    width: 80%;
+    font-size: 18px;
+  }
+  .textoMobile strong{
+    color: #f5a2de;
+    font-size: 22px;
+    text-decoration: underline;
+    font-style: italic;
+  }
 @media (max-width:1658px){ 
   .cajasEfectoSobreMi{
     width: 90%;
@@ -118,11 +129,20 @@
   .textoSobreSofia{
     width: 90%;
   }
+  .textoConHover{
+    display: none;
+  }
+  .textoMobile{
+    display: block;
+  }
 }
 
 @media (max-width:700px){ 
   .cajaHover{
     width:100%;    
+  }
+  .textoMobile{
+    width:100%
   }
 }
 @media (max-width:480px){ 
