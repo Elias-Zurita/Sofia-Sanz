@@ -217,12 +217,13 @@
         <div class="seccionUnete">
             <div class="tituloUnete">ÚNETE A MI LISTA VIP</div>
             <div class="textoUnete">Recibe ofertas exclusivas directamente a tu bandeja de entrada</div>
-            <form action="https://formsubmit.co/sofiasanzplanes4@gmail.com" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
                 <div class="inputUnete">
-                    <input type="email" placeholder="Correo electrónico" name="email" required>
+                  <input type="hidden" name="access_key" value="415ccc0f-edf5-4955-8e63-34ff8fbb98db"> <!-- el value es la key que me envio por mail la pagina, eso vincula los msj a mi casilla de gmail -->
+                  <input type="email" placeholder="Correo electrónico" name="email" minlength="4" maxlength="40" required>
                 </div>
                 <div class="botonUnete">
-                    <button type="submit"><span>ENVIAR</span></button>
+                  <button type="submit"><span>ENVIAR</span></button>
                 </div>
             </form>
         </div>
