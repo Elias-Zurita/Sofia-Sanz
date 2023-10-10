@@ -34,6 +34,7 @@
     height: 600px;
     text-align: center;
     overflow: hidden;
+    position: relative;
 }
 .portadaEbook img{
     width: 100%;
@@ -52,6 +53,36 @@
     margin-top: 20px;
     transition: 0;
 }
+.piernasFuertes{
+    height: 100%;
+    padding: 0 2%;
+}
+.bannerPiernas{
+    position:absolute;
+    bottom: 0;
+    right: 0%
+}
+.reservar{
+    margin-right: auto;
+    cursor: pointer;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    border: none;
+}
+.reservar:hover{
+    background:  #ffd4f3;
+    color: black;
+    border: black solid 2px;
+    transform: scale(1.2);
+}
 @media (max-width:1642px){ 
     .cajaEbooks{
         margin: 3% auto 3% auto;
@@ -63,6 +94,10 @@
     .portadaEbook{
         height: 400px;
         text-align: center;
+    }
+    .piernasFuertes{
+        padding: 0 2%;
+        font-size: 17px;
     }
 }
 @media (max-width:900px){ 
